@@ -4,7 +4,7 @@ html.dark-mode {
     /* background-image: linear-gradient(to bottom, #abf88274, #a541fc58); */
 }
 body.dark-mode {
-    background-color: white;
+    background-color: transparent;
     /* background-image: linear-gradient(to bottom, #abf88274, #a541fc58); */
 }
 
@@ -80,7 +80,7 @@ body{
     padding: 0;              /* Removes the default padding */
     width: 90%;
     flex-direction: column;  /* Aligns content vertically if multiple items */
-    background-color: #121212;
+    background-color: transparent;
     margin-left: 5%;
 }
 
