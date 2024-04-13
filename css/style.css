@@ -44,7 +44,7 @@ body.dark-mode #project7::before,
 body.dark-mode #project8::before,
 body.dark-mode #project9::before,
 body.dark-mode #project10::before{
-    opacity: 0.7; /* Adjust opacity as needed */
+    opacity: 0.4; /* Adjust opacity as needed */
 }
 
 body.dark-mode #footerLetters h1{
@@ -321,15 +321,15 @@ body{
         display: block;
         position: absolute; /* Allows for random positioning and dragging */
         background-color: #aefc4100;
-        top: 52%;
+        top: 47%;
         border: 5px solid #AFFC41;
         border-radius: 1em; /* Optional: Rounds the corners */
-        width: 37%; /* Prevents the div from being too wide */
+        width: 50%; /* Prevents the div from being too wide */
     
     }    
         #homePageArtistDescriptionD p{
             line-height: 1.5;
-            font-size: 1em; /* Adjust font size as needed */
+            font-size: 1.3em; /* Adjust font size as needed */
             color: white;
             padding: 3%;
         }
