@@ -368,6 +368,7 @@ body{
     /* border-right: 20px solid #AFFC41; */
     border-radius: 3%;
     z-index: 1;
+    margin-bottom: 5%;
 }
 
     #homePageStartContentM h1{
@@ -441,8 +442,6 @@ body{
     /* border: 5px solid #AFFC41; */
     border-radius: 1em; /* Optional: Rounds the corners */
     width: 90%; /* Prevents the div from being too wide */
-    margin-bottom: 5%;
-
 }    
     #homePageArtistDescriptionM p{
         font-family: "Inter", sans-serif;
@@ -451,7 +450,6 @@ body{
         color: white;
         font-weight: 300;
         padding-top: 6%;
-        padding-bottom: 10%;
     }
 
     #firstRowM, #secondRowM, #thirdRowM{
