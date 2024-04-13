@@ -350,6 +350,7 @@ body{
     position: relative;
     overflow: hidden;
     height: fit-content;
+    margin-bottom: 10%;
 }
 
 #backgroundMobile {
@@ -368,7 +369,6 @@ body{
     /* border-right: 20px solid #AFFC41; */
     border-radius: 3%;
     z-index: 1;
-    margin-bottom: 5%;
 }
 
     #homePageStartContentM h1{
