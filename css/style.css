@@ -349,7 +349,7 @@ body{
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: fit-content;
 }
 
 #backgroundMobile {
@@ -949,7 +949,7 @@ body{
     }
 
     .theme-slider {
-        top: 20rem;
+        top: 21rem;
         right: 5%;
     }
 
