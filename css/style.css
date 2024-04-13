@@ -44,7 +44,7 @@ body.dark-mode #project7::before,
 body.dark-mode #project8::before,
 body.dark-mode #project9::before,
 body.dark-mode #project10::before{
-    opacity: 0.4; /* Adjust opacity as needed */
+    opacity: 0.2; /* Adjust opacity as needed */
 }
 
 body.dark-mode #footerLetters h1{
