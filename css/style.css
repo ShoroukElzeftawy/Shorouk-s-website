@@ -441,6 +441,7 @@ body{
     /* border: 5px solid #AFFC41; */
     border-radius: 1em; /* Optional: Rounds the corners */
     width: 90%; /* Prevents the div from being too wide */
+    margin-bottom: 5%;
 
 }    
     #homePageArtistDescriptionM p{
@@ -949,7 +950,7 @@ body{
     }
 
     .theme-slider {
-        top: 21rem;
+        top: 20rem;
         right: 5%;
     }
 
