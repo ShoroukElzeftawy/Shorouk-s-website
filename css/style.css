@@ -438,7 +438,7 @@ body{
     display: block;
     position: absolute; /* Allows for random positioning and dragging */
     background-color: #aefc4100;
-    top: 45%;
+    top: 50%;
     /* border: 5px solid #AFFC41; */
     border-radius: 1em; /* Optional: Rounds the corners */
     width: 90%; /* Prevents the div from being too wide */
