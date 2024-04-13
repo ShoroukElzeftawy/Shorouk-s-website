@@ -324,7 +324,7 @@ body{
         top: 47%;
         border: 5px solid #AFFC41;
         border-radius: 1em; /* Optional: Rounds the corners */
-        width: 43%; /* Prevents the div from being too wide */
+        width: 40%; /* Prevents the div from being too wide */
     
     }    
         #homePageArtistDescriptionD p{
