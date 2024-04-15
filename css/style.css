@@ -343,7 +343,7 @@ body{
     position: relative;
     height: 100vh;
     margin-bottom: 10%;
-    height: 100vh;
+    height: fit-content
 }
 
 #backgroundMobile {
@@ -937,7 +937,7 @@ body{
     }
 
     .theme-slider {
-        top: 38vh;
+        top: 40vh;
         right: 5vw;
     }
 
