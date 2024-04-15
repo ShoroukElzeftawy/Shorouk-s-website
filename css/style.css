@@ -87,7 +87,9 @@ body{
 /* start of homePage */
 #homePage{
     display: flex;
-    width: 100%;
+    width: 90vw;
+    height: 100vh;
+    overflow: hidden;
 }
     #background {
         width: 30%;
@@ -102,7 +104,7 @@ body{
     }
 
     #homePage1{
-        width: 100%;
+        width: 50vw;
     }
 
 #homePageStartContent{
@@ -131,7 +133,6 @@ body{
         color: #AFFC41 ;
         }
 
-        
     #homePageStartContent h2 {
         pointer-events: none;
         position: absolute; /* Make the position absolute to move freely */
@@ -150,9 +151,8 @@ body{
     }
 
 #homeLetters {
-    margin-top: 11%;
+    margin-top: 10%;
     padding: 0%;
-    height: 100vh;
 }
 
     #homeLetters > div { /* Targets each row within #homeLetters */
@@ -183,13 +183,10 @@ body{
     }
 
 #homePageAddons{
-    position: absolute;
-    top: 80%;
-    left: 5%;
-    padding: 0.1%;
-    width: 90%;
+    margin-top: 33%;
+    padding: 1%;
+    width: 100%;
     text-align: left;
-    margin-top: 5%;
     border-radius: 1em;
 }
 
@@ -241,8 +238,8 @@ body{
 
     #homePage2{
         margin-top: 4%;
-        width: 100%;
-        margin-left: 5%;
+        width: 50vw;
+        margin-left: 5em;
     }
     #homePageStartContentD{
         border-radius: 3%;
@@ -282,7 +279,6 @@ body{
     
     #homeLettersD {
         padding: 0%;
-        height: 100vh;
     }
     
         #homeLettersD > div { /* Targets each row within #homeLetters */
@@ -318,20 +314,20 @@ body{
     }    
     
     #homePageArtistDescriptionD{
+        margin-top: 45%;
         display: block;
-        position: absolute; /* Allows for random positioning and dragging */
         background-color: #aefc4100;
-        top: 45%;
         border: 5px solid #AFFC41;
         border-radius: 1em; /* Optional: Rounds the corners */
-        width: 41%; /* Prevents the div from being too wide */
+        width: 98%; /* Prevents the div from being too wide */
     
     }    
         #homePageArtistDescriptionD p{
             line-height: 1.5;
-            font-size: 1.3em; /* Adjust font size as needed */
+            font-size: 1.1em; /* Adjust font size as needed */
             color: white;
-            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
         }
 
     
@@ -346,11 +342,11 @@ body{
 /* start of homePage mobiles */
 #homePageMobile{
     display: none;
-    width: 100%;
+    width: 90vw;
     position: relative;
-    overflow: hidden;
-    height: fit-content;
+    height: 100vh;
     margin-bottom: 10%;
+    height: 100vh;
 }
 
 #backgroundMobile {
@@ -363,10 +359,8 @@ body{
 }
 
 #homePageStartContentM{
-    padding-top:10%;
-    width: 90%;
-    margin-left: 5%;
-    /* border-right: 20px solid #AFFC41; */
+    margin-top: 30%;
+    width: 100%;
     border-radius: 3%;
     z-index: 1;
 }
@@ -404,7 +398,6 @@ body{
 
 #homeLettersM {
     padding: 0%;
-    height: 100vh;
 }
 
     #homeLettersM > div { /* Targets each row within #homeLetters */
@@ -435,13 +428,11 @@ body{
     }
 
 #homePageArtistDescriptionM{
+    margin-top: 30%;
     display: block;
-    position: absolute; /* Allows for random positioning and dragging */
     background-color: #aefc4100;
-    top: 50%;
-    /* border: 5px solid #AFFC41; */
     border-radius: 1em; /* Optional: Rounds the corners */
-    width: 90%; /* Prevents the div from being too wide */
+    width: 100%; /* Prevents the div from being too wide */
 }    
     #homePageArtistDescriptionM p{
         font-family: "Inter", sans-serif;
@@ -463,7 +454,7 @@ body{
     #menuToggle {
         display: none;
         position: fixed;
-        top: 6%;
+        top: 3%;
         right: 6%;
         background: none; /* Removes the default button background */
         border: none; /* Removes the default button border */
@@ -545,8 +536,8 @@ body{
 .theme-slider {
     z-index: 2;
     position: absolute;
-    top: 29%;
-    right: 5%;
+    top: 29vh;
+    right: 5vw;
     display: block;
     display: flex;
     justify-content: left; /* Aligns children (the slider) to the end (right) */
@@ -624,7 +615,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: left;
-    width: 100%; /* Adjust based on layout */
+    width: 90vw; /* Adjust based on layout */
 }
 
 #projectsList {
@@ -864,7 +855,7 @@ body{
 /* start of footer section */
 #footer {
     background-color: transparent;
-    width: 100%;
+    width: 90vw;
 }
 
 #footer3{
@@ -882,13 +873,13 @@ body{
         width: 50%;
         color: white;
         font-size: 1.5em;
-        text-transform: uppercase;
         font-weight: 400;
     }
 
     #footerContent a{
         text-decoration: none;
         color: white;
+        text-transform: uppercase;
     }
 
     #footerContent a:hover {
@@ -949,8 +940,8 @@ body{
     }
 
     .theme-slider {
-        top: 20rem;
-        right: 5%;
+        top: 38vh;
+        right: 5vw;
     }
 
     #menu {
@@ -979,6 +970,9 @@ body{
         display: none !important; /* Hide desktop-specific rows in mobile view */
     }
 
+    #projectsPage{
+        width: 100vw;
+    }
     .projectTitle h1 {
         font-size: 3em;
     }
@@ -1028,6 +1022,7 @@ body{
     }
 
     #footer{
+        width: 100vw;
         margin-top: 5%;
     }
 
@@ -1050,14 +1045,11 @@ body{
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) {
-    body{
-        width: 90%;
-        margin-left: 5%;
-    }
     #homePage{
         margin-top: 2%;
         display: flex;
-        width: 100%;
+        width: 90vw;
+        height: 70vh;
     }
 
     #homePageMobile{
@@ -1068,40 +1060,46 @@ body{
         width: 60%;
     }
 
-    #homePage1{
-        margin-top: 6%;
-        width: 60%;
+    #homePageAddons {
+        margin-top: 77% !important;
     }
 
-    #homePageStartContent h1 {
+    #homePage h1{
         font-size: 5em;
     }
 
-    #homeLettersD h1{
-        font-size: 0.9em;
+    #homePage1{
+        margin-top: 10%;
+        width: 50vw;
     }
 
     #homePage2{
         margin-top: 5%;
         display: block;
-        width: 60%
+        width: 50vw;
+        margin-left: 1em;
+    }
+
+    #homeLettersD h1{
+        font-size: 1.4em;
     }
 
     #homePageArtistDescriptionD {
-        top: 42%;
-        left: 5%;
-        width: 90%;
+        margin-top: 65%;
+        width: 98%;
+        border: 2px solid #AFFC41;
     }
 
     #homePageArtistDescriptionD p {
         line-height: 1.5;
-        font-size: 1.8em;
+        font-size: 1em;
         color: white;
-        padding: 3%;
+        padding-left: 7%;
+        padding-left: 7%;
     }
 
     #homePageAddons {
-        top: 90%;
+        margin-top: 55%;
     }
 
     #homePageAddons li {
@@ -1110,8 +1108,8 @@ body{
     }
 
     .theme-slider {
-        top: 13%;
-        right: 5%;
+        top: 18vh;
+        right: 5vw;
     }
 
     .projectTitle h1 {
@@ -1167,13 +1165,14 @@ body{
   and (min-device-width: 1024px) 
   and (max-device-width: 1360px) {
     body{
-        width: 90%;
+        width: 90vw;
         margin-left: 5%;
     }
     #homePage{
         margin-top: 2%;
         display: flex;
-        width: 100%;
+        width: 90vw;
+        height: 60vh;
     }
 
     #homePageMobile{
@@ -1186,13 +1185,13 @@ body{
 
     #homePage1{
         margin-top: 10%;
-        width: 50%;
+        width: 50vw;
     }
 
     #homePage2{
         margin-top: 5%;
         display: block;
-        width: 50%
+        width: 50vw
     }
 
     #homeLettersD h1{
@@ -1200,20 +1199,19 @@ body{
     }
 
     #homePageArtistDescriptionD {
-        top: 45%;
-        left: 5%;
-        width: 90%;
+        margin-top: 58%;
+        width: 98%;
     }
 
     #homePageArtistDescriptionD p {
         line-height: 1.5;
-        font-size: 2em;
+        font-size: 1em;
         color: white;
         padding: 3%;
     }
 
     #homePageAddons {
-        top: 90%;
+        margin-top: 55%;
     }
 
     #homePageAddons li {
