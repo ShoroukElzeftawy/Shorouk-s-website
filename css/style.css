@@ -709,7 +709,7 @@ body{
 
 /* Unique background images for each project */
 #project1::before { background-image: url('../img/doThesePants/11.jpg'); }
-#project2::before { background-image: url('../img/noc/1.jpf'); }
+#project2::before { background-image: url('../img/noc/1.png'); }
 #project3::before { background-image: url('../img/motorchosis/2.jpg'); }
 #project4::before { background-image: url('../img/shufa/1.jpg'); }
 #project5::before { background-image: url('../img/canyouhearme/1.jpg'); }
