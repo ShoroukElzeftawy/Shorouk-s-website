@@ -35,12 +35,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Listen for the end of the animation
-    h2.addEventListener('animationiteration', changeVerticalPosition);
-    h2M.addEventListener('animationiteration', changeVerticalPositionM);
+    if (h2) {
+        h2.addEventListener('animationiteration', changeVerticalPosition);
+    }
+    if (h2M) {
+        h2M.addEventListener('animationiteration', changeVerticalPositionM);
+    }
 
     // Initialize the first position
-    changeVerticalPosition();
-    changeVerticalPositionM();
+    if (h2) {
+        changeVerticalPosition();
+    }
+    if (h2M) {
+        changeVerticalPositionM();
+    }
 
     // Function to show the artist description randomly
     h1Elements.forEach(h1 => {
@@ -56,20 +64,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Function to close the artist description
-    closeImage.addEventListener('click', () => {
-        artistDescription.style.display = 'none';
-    });
+    if (closeImage) {
+        closeImage.addEventListener('click', () => {
+            artistDescription.style.display = 'none';
+        });
+    }
 
     // Functionality to drag the div
     let isDragging = false;
     let offsetX, offsetY;
 
-    artistDescription.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        offsetX = e.clientX - artistDescription.getBoundingClientRect().left;
-        offsetY = e.clientY - artistDescription.getBoundingClientRect().top;
-        artistDescription.style.cursor = 'grabbing';
-    });
+    if (artistDescription) {
+        artistDescription.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - artistDescription.getBoundingClientRect().left;
+            offsetY = e.clientY - artistDescription.getBoundingClientRect().top;
+            artistDescription.style.cursor = 'grabbing';
+        });
+    }
 
     document.addEventListener('mousemove', (e) => {
         if (isDragging) {
@@ -103,8 +115,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Attach event listener to the menu toggle button
-    menuToggle.addEventListener('click', toggleSideMenu);
-    closeMenu.addEventListener('click', closeSideMenu);
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleSideMenu);
+    }
+    if (closeMenu) {
+        closeMenu.addEventListener('click', closeSideMenu);
+    }
 
     // Close side menu when any link within the menu is clicked
     document.querySelectorAll('#mobileNavLinks a').forEach(link => {
@@ -118,14 +134,21 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 projects.forEach(project => {
-    project.addEventListener('click', function() {
-        const projectShow = this.querySelector('.projectShow');
-        const img = this.querySelector('img.plusImg');
+    const projectHeader = project.querySelector('.projects-header');
+    const projectShow = project.querySelector('.projectShow');
+    const img = project.querySelector('img.plusImg');
+
+    if (!projectHeader || !projectShow || !img) {
+        return;
+    }
+
+    function toggleProject() {
         const isCurrentlyVisible = projectShow.style.display === 'block';
 
         // Reset all projectShows to their original state
         projectShows.forEach(show => {
             show.style.display = 'none';
+            show.closest('.project').classList.remove('is-open');
             const plusImgInOtherProjects = show.closest('.project').querySelector('.plusImg');
             if (plusImgInOtherProjects) plusImgInOtherProjects.style.transform = 'rotate(0deg)';
         });
@@ -133,18 +156,26 @@ projects.forEach(project => {
         // Toggle the visibility of the current projectShow
         if (!isCurrentlyVisible) {
             projectShow.style.display = 'block';
+            project.classList.add('is-open');
             img.style.transform = 'rotate(180deg)';
-            this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            project.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
             projectShow.style.display = 'none';
+            project.classList.remove('is-open');
             img.style.transform = 'rotate(0deg)';
-            this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            project.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
             // Scroll the project into view if it is being closed
             setTimeout(() => {
-                this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                project.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100); // A slight delay to ensure the closing animation can be seen
         }
+    }
+
+    projectHeader.addEventListener('click', toggleProject);
+    img.addEventListener('click', function(event) {
+        event.stopPropagation();
+        toggleProject();
     });
 });
 
@@ -154,10 +185,13 @@ projects.forEach(project => {
 
 
 // start of Toggle theme and image on theme change
-themeToggle.addEventListener('change', function() {
-    document.body.classList.toggle('dark-mode');
-    document.documentElement.classList.toggle('dark-mode');
-});
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+    themeToggle.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode');
+        document.documentElement.classList.toggle('dark-mode');
+    });
+}
 // end of Toggle theme and image on theme change
 
 
@@ -207,5 +241,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animate();
 });
-
-

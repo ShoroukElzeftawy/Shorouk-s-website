@@ -356,6 +356,8 @@ body{
 }
 
 #homePageStartContentM{
+    overflow: hidden;
+    position: relative;
     margin-top: 30%;
     width: 100%;
     border-radius: 3%;
@@ -709,7 +711,7 @@ body{
 
 /* Unique background images for each project */
 #project1::before { background-image: url('../img/doThesePants/11.jpg'); }
-#project2::before { background-image: url('../img/noc/1.png'); }
+#project2::before { background-image: url('../img/NOC/1.png'); }
 #project3::before { background-image: url('../img/motorchosis/2.jpg'); }
 #project4::before { background-image: url('../img/shufa/1.jpg'); }
 #project5::before { background-image: url('../img/canyouhearme/1.jpg'); }
@@ -1159,6 +1161,320 @@ body{
     }
 
   }    
+
+/* Responsive cleanup */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+#project2::before {
+    background-image: url('../img/NOC/1.png');
+}
+
+@media (min-width: 901px) {
+    #homePage,
+    #projectsPage,
+    #footer {
+        width: min(90vw, 1600px);
+    }
+
+    #homePage {
+        align-items: center;
+        display: flex;
+        gap: clamp(1.25rem, 4vw, 5rem);
+        height: auto;
+        min-height: 100svh;
+        overflow: visible;
+        padding: clamp(2rem, 5vh, 4rem) 0;
+    }
+
+    #homePage1,
+    #homePage2 {
+        flex: 1 1 0;
+        margin-left: 0;
+        margin-top: 0;
+        min-width: 0;
+        width: auto;
+    }
+
+#homeLetters {
+    margin-top: 0;
+}
+
+#thirdRow,
+#thirdRowM {
+    border-bottom: 5px solid white;
+    gap: clamp(0.75rem, 3vw, 2rem);
+    justify-content: flex-start;
+}
+
+#thirdRow h1,
+#thirdRowM h1 {
+    border-bottom: 0 !important;
+    flex: 0 1 auto;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: auto;
+}
+
+#thirdRow h1:last-child,
+#thirdRowM h1:last-child {
+    text-align: left;
+}
+
+#homePageStartContent h1 {
+    font-size: clamp(4rem, 7vw, 7em);
+}
+
+    #firstRow h1 {
+        font-size: clamp(3rem, 5vw, 5em) !important;
+    }
+
+    #homePageStartContentD h1,
+    #firstRowD h1 {
+        font-size: clamp(1.1rem, 1.6vw, 1.5em);
+    }
+
+    #homePageAddons {
+        margin-top: clamp(3rem, 18vh, 12rem);
+    }
+
+    #homePageAddons ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    #homePageArtistDescriptionD {
+        margin-top: clamp(3rem, 18vh, 11rem);
+        width: 100%;
+    }
+
+    #homePageStartContent h2,
+    #homePageStartContentD h2 {
+        font-size: clamp(2.25rem, 4vw, 4em);
+    }
+
+    .theme-slider {
+        position: fixed;
+        top: clamp(1rem, 4vh, 2rem);
+        right: clamp(1rem, 5vw, 4rem);
+    }
+}
+
+#projectsList {
+    display: grid;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+}
+
+.project {
+    height: clamp(28rem, 63vh, 42rem);
+    margin-bottom: 0;
+    max-width: none;
+    min-height: 0;
+    min-width: 0;
+    width: 100%;
+}
+
+.project.is-open {
+    height: auto;
+}
+
+.projects-header {
+    display: flex;
+    min-height: 100%;
+}
+
+.projectTitle {
+    margin-right: 0;
+    padding: clamp(1.25rem, 3.5vw, 2.75rem);
+    width: 100%;
+}
+
+.projectTitle h1 {
+    font-size: clamp(1.35rem, 2.55vw, 2.25em);
+    line-height: 1;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+    width: 100%;
+}
+
+.projectTitle h2 {
+    font-size: clamp(0.9rem, 1.6vw, 1.35em);
+    width: 100%;
+}
+
+.plusImg {
+    width: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.projectShow {
+    cursor: default;
+    width: 100%;
+}
+
+#pantsText,
+#networkText,
+#shufaText,
+#farahText,
+#motorchosisText,
+#canYouHearMeText,
+#hddnText,
+#videoText,
+#movingText,
+#seesawText {
+    width: min(90%, 70rem);
+}
+
+#pantsText p,
+#networkText p,
+#shufaText p,
+#farahText p,
+#motorchosisText p,
+#canYouHearMeText p,
+#hddnText p,
+#videoText p,
+#movingText p,
+#seesawText p {
+    font-size: clamp(1rem, 1.25vw, 1.2rem);
+}
+
+#pants2,
+#pants3,
+#pants4,
+#pants5,
+#seesaw2,
+.video-pair {
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+#footerLetters {
+    height: auto;
+    padding: clamp(2rem, 5vh, 4rem) 0;
+}
+
+@media (max-width: 900px) {
+    body {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #homePage {
+        display: none;
+    }
+
+    #homePageMobile {
+        display: block;
+        min-height: 100svh;
+        height: auto;
+        margin-bottom: 3rem;
+        overflow: clip;
+        width: min(90vw, 42rem);
+    }
+
+    #backgroundMobile {
+        position: fixed;
+        width: min(90vw, 24rem);
+    }
+
+    #homePageStartContentM {
+        margin-top: clamp(5rem, 18vh, 9rem);
+    }
+
+    #thirdRowM {
+        gap: clamp(0.75rem, 4vw, 1.5rem);
+        justify-content: flex-start;
+    }
+
+    #thirdRowM h1 {
+        flex: 0 1 auto;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: auto;
+    }
+
+    #thirdRowM h1:last-child {
+        text-align: left;
+    }
+
+    #homePageStartContentM h1 {
+        font-size: clamp(2rem, 9vw, 4rem);
+    }
+
+    #firstRowM h1 {
+        font-size: clamp(2.5rem, 12vw, 5rem) !important;
+    }
+
+    #homePageArtistDescriptionM {
+        margin-top: clamp(3rem, 14vh, 7rem);
+    }
+
+    #projectsPage,
+    #footer {
+        width: min(92vw, 48rem);
+    }
+
+    #projectsList {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        height: clamp(18rem, 45vh, 24rem);
+        margin-left: 0;
+        max-width: none;
+        min-height: 0;
+        min-width: 0;
+    }
+
+    .projectTitle {
+        width: 100%;
+    }
+
+    #pants2,
+    #pants3,
+    #pants4,
+    #pants5,
+    #seesaw2,
+    .video-pair {
+        flex-direction: column;
+    }
+
+    #pants2 img,
+    #pants3 img,
+    #pants4 img,
+    #pants5 img,
+    #seesaw2 img,
+    .video-pair video {
+        width: 100%;
+    }
+
+    #mobileNavLinks li {
+        font-size: clamp(2.5rem, 14vw, 5rem);
+    }
+
+    #footerContent {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #footerLetters > div {
+        gap: 1rem;
+    }
+}
 
 @media only screen 
   and (min-device-width: 1024px) 
